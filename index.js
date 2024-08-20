@@ -1,6 +1,7 @@
 const express = require("express");
 const { connectDB } = require("./src/utils/db")
 const router = require("./src/api/routes/characters.routes")
+const cors = require("cors")
 const env = require("dotenv")
 
 env.config()
@@ -13,6 +14,7 @@ cloudinary.config({ */
 connectDB();
 
 const server = express();
+server.use(cors())
 const PORT = process.env.PORT;
 
 server.use(express.json())
