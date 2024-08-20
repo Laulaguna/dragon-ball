@@ -5,10 +5,10 @@ const env = require("dotenv")
 
 env.config()
 
-const cloudinary = require("cloudinary").v2
-cloudinary.config({
+/* const cloudinary = require("cloudinary").v2
+cloudinary.config({ */
 
-})
+/* }) */
 
 connectDB();
 
